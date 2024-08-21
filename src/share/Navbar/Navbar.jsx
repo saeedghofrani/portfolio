@@ -13,10 +13,6 @@ const Navbar = () => {
 
   return (
     <nav className={style.navbar}>
-      <div className={style.branding}>
-        {/* <span className={style.initials}>SG</span> */}
-        <span className={style.name}>Saeed Ghofrani</span>
-      </div>
       <ul>
         <li
           className={activeLink === '/' ? style.active : ''}
