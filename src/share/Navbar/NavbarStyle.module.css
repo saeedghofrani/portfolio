@@ -1,24 +1,67 @@
+/* Navbar container */
 .navbar {
-  position: sticky;
+  width: 100%;
+  position: fixed;
   top: 0;
+  left: 0;
   background-color: #333;
-  padding: 10px 0;
   z-index: 1000;
-  width: auto;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  box-sizing: border-box;
 }
 
 .navbar ul {
-  list-style-type: none;
+  list-style: none;
   display: flex;
-  justify-content: space-around;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar ul li a {
-  color: white;
+.navbar li {
+  margin: 0 20px;
+  position: relative;
+}
+
+.navIcon {
+  color: #fff !important;
+  font-size: 24px;
   text-decoration: none;
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 8px;
+  transition: color 0.3s ease;
+  flex-direction: column;
+}
+.navIcon:hover {
+  color: #00bfff;
 }
 
-.navbar ul li a:hover {
+.tooltip {
+  position: absolute;
+  bottom: -35px;
   background-color: #555;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+
+.navIcon:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.navbar .active .navIcon {
+  color: #00bfff !important; /* Ensure the active icon color is applied */
+  border-bottom: 2px solid #00bfff; /* Add an underline */
 }
