@@ -1,4 +1,3 @@
-/* Navbar container */
 .navbar {
   width: 100%;
   position: fixed;
@@ -7,9 +6,27 @@
   background-color: #333;
   z-index: 1000;
   display: flex;
-  justify-content: center;
-  padding: 10px 0;
+  justify-content: space-between; /* Space between branding and menu */
+  align-items: center; /* Center vertically */
+  padding: 10px 20px; /* Adjust padding */
   box-sizing: border-box;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+}
+
+.initials {
+  font-size: 24px;
+  color: #00bfff;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.name {
+  font-size: 18px;
+  color: #fff;
 }
 
 .navbar ul {
@@ -33,7 +50,7 @@
   justify-content: center;
   position: relative;
   padding: 8px;
-  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
+  transition: color 0.3s ease;
   flex-direction: column;
 }
 
@@ -61,23 +78,7 @@
 }
 
 .navbar .active .navIcon {
-  color: #00bfff !important;
-  border-bottom: 2px solid #00bfff;
-  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
-}
-
-.navbar .navIcon::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #00bfff;
-  transition: width 0.3s ease;
-}
-
-.navIcon:hover::after,
-.navbar .active .navIcon::after {
-  width: 100%; /* Full-width underline on hover or when active */
+  color: #00bfff;
+  border-bottom: 2px solid #00bfff; /* Add underline */
+  transition: border-bottom 0.3s ease;
 }
