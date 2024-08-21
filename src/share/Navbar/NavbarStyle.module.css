@@ -1,4 +1,3 @@
-/* Navbar container */
 .navbar {
   width: 100%;
   position: fixed;
@@ -80,4 +79,22 @@
 .navIcon:hover::after,
 .navbar .active .navIcon::after {
   width: 100%; /* Full-width underline on hover or when active */
+}
+
+
+.resume {
+  margin-left: auto !important; /* Push Resume button to the right */
+}
+
+.resume a {
+  color: #fff !important;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 8px;
+  border-radius: 4px;
+  transition: color 0.3s ease;
+}
+
+.resume a:hover {
+  color: #00bfff;
 }

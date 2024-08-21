@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaHome, FaProjectDiagram, FaTools, FaEnvelope } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 import style from './NavbarStyle.module.css';
+import CV from '../../assets/cv.pdf';
 
 const Navbar = () => {
   const location = useLocation();
@@ -50,6 +51,11 @@ const Navbar = () => {
             <span className={style.tooltip}>Contact</span>
           </Link>
         </li>
+        {/* <li className={style.resume}>
+          <a href={CV} download className={style.navIcon}>
+            Resume
+          </a>
+        </li> */}
       </ul>
     </nav>
   );

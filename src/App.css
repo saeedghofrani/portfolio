@@ -11,11 +11,11 @@
 [data-theme='dark'] {
   --background-color: #102937;
   --btn-color: #d84f2a;
-  --btn-text-color: #d6c4b0;
+  --btn-text-color: #ffffff;
   --project-card-bg: #fff;
-  --text-color: #d6c4b0;
-  --form-text-color: #d6c4b0;
-  --footer-text-color: #d6c4b0;
+  --text-color: #fff;
+  --form-text-color: #fff;
+  --footer-text-color: #fff;
 }
 
 body {
@@ -43,7 +43,7 @@ p {
 h2,
 h3,
 p {
-  font-family: 'Roboto Mono', monospace;
+  font-family: monospace;
 }
 
 h1,
@@ -57,7 +57,7 @@ h3 {
 }
 
 h1 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', monospace;
   font-size: 32px;
 }
 
