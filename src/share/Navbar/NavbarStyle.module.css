@@ -33,9 +33,10 @@
   justify-content: center;
   position: relative;
   padding: 8px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
   flex-direction: column;
 }
+
 .navIcon:hover {
   color: #00bfff;
 }
@@ -54,14 +55,29 @@
   transition: opacity 0.3s ease;
 }
 
-
 .navIcon:hover .tooltip {
   opacity: 1;
   visibility: visible;
 }
 
-
 .navbar .active .navIcon {
-  color: #00bfff !important; /* Ensure the active icon color is applied */
-  border-bottom: 2px solid #00bfff; /* Add an underline */
+  color: #00bfff !important;
+  border-bottom: 2px solid #00bfff;
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
+}
+
+.navbar .navIcon::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00bfff;
+  transition: width 0.3s ease;
+}
+
+.navIcon:hover::after,
+.navbar .active .navIcon::after {
+  width: 100%; /* Full-width underline on hover or when active */
 }
