@@ -14,13 +14,15 @@
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  transition: height 0.3s ease, border-radius 0.3s ease;
+  transition: height 0.3s ease, border-radius 0.3s ease, padding 0.3s ease;
   overflow: hidden;
+  padding: 0; /* Added for smooth padding transition */
 }
 
 .navbar.open {
-  height: fit-content; /* Adjust height based on the number of icons */
+  height: 300px; /* Set the height to accommodate all icons */
   border-radius: 25px;
+  padding: 10px 0; /* Add padding when open */
 }
 
 .navIconContainer {
@@ -28,7 +30,6 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  padding: 10px 0;
 }
 
 .navIcon {
@@ -42,14 +43,14 @@
 }
 
 .circleIcon {
-  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
+  transition: color 0.3s ease, border-bottom 0.3s ease;
   color: #fff;
   font-size: 24px;
 }
 
 @media (max-width: 768px) {
   .navbar.open {
-    height: 160px;
+    height: 160px; /* Adjusted for smaller screens */
   }
 
   .navIcon {
