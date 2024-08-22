@@ -33,18 +33,18 @@
 }
 
 .navIcon {
-  color: #fff;
+  color: #d84f2a;
   font-size: 24px;
   transition: color 0.3s ease;
 }
 
 .navIcon:hover, .circleIcon:hover {
-  color: #00bfff;
+  color: #d8502a30;
 }
 
 .circleIcon {
   transition: color 0.3s ease, border-bottom 0.3s ease;
-  color: #fff;
+  color: #d84f2a;
   font-size: 24px;
 }
 
