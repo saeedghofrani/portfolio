@@ -11,8 +11,6 @@ function Hero() {
     "you can't handle the regex. - jake peralta",
     "Could I be any more out of memory? - Chanandler Bung",
     "Pivot! Pivot your data structures! - Ross Geller",
-    "I am not a hello world programmer. I am a HELLO WORLD programmer. - Sheldon Cooper",
-    "I'm not superstitious, but I am a little if/else-stitious. - Michael Scott",
     "You can’t just Ctrl+C your problems away. - Leslie Knope",
     "Smelly code, smelly code, what are they feeding you? - Phoebe Buffay",
     "How you doin’… with that API integration? - Joey Tribbiani",
