@@ -21,7 +21,7 @@ function Hero() {
     "It's not a bug, it's a feature. - Tony Stark",
     "May the source be with you. - Obi-Wan Kenobi",
     "Sometimes even God ask's me, What the fuck is that. - deadpool",
-    "I'm not in danger, Skyler. I am the Bug. - Walter White",
+    "I'm not in danger, Skyler. I am the one who create the Bug's. - Walter White",
     "That's one small step for a junior, one giant Debugging for the senior. - Neil Armstrong"
   ];
 
