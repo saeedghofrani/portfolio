@@ -1,0 +1,62 @@
+.findMeContainer {
+  position: fixed;
+  right: 20px;
+  top: 20%;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: height 0.3s ease, border-radius 0.3s ease;
+  overflow: hidden;
+}
+
+.navbar.open {
+  height: fit-content; /* Adjust height based on the number of icons */
+  border-radius: 25px;
+}
+
+.navIconContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.navIcon {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.navIcon:hover, .circleIcon:hover {
+  color: #00bfff;
+}
+
+.circleIcon {
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
+  color: #fff;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .navbar.open {
+    height: 160px;
+  }
+
+  .navIcon {
+    font-size: 20px;
+  }
+
+  .circleIcon {
+    font-size: 20px;
+  }
+}

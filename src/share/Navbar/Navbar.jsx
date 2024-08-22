@@ -3,6 +3,8 @@ import { FaHome, FaProjectDiagram, FaTools, FaEnvelope } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 import style from './NavbarStyle.module.css';
 import CV from '../../assets/cv.pdf';
+import { GrProjects } from "react-icons/gr";
+
 
 const Navbar = () => {
   const location = useLocation();
@@ -29,7 +31,7 @@ const Navbar = () => {
           onClick={() => handleNavClick('/projects')}
         >
           <Link to="/projects" className={style.navIcon}>
-            <FaProjectDiagram />
+          <GrProjects />
             <span className={style.tooltip}>Projects</span>
           </Link>
         </li>
