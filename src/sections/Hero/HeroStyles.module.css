@@ -1,25 +1,43 @@
 .container {
   display: flex;
-  flex-direction: row;
-  justify-content: flex;
+  flex-direction: column; /* Change to column to stack elements vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
   gap: 20px;
-  text-align: left; /* Align text to the left */
-  padding: 200px;
-  height: auto; /* Adjusted to full viewport height */
+  text-align: center; /* Center-align text */
+  padding: 100px 20px; /* Adjust padding as needed */
+  height: auto;
   min-height: 500px;
   box-sizing: border-box;
+}
+
+.quoteContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Make sure the container takes the full width */
+}
+
+.quote {
+  font-size: 20px;
+  font-family: cursive;
+  color: var(--text-color); /* Match the color with your theme */
+  border-left: 4px solid var(--primary-color); /* Add a left border for emphasis */
+  padding-left: 10px; /* Add padding to the left of the text */
 }
 
 .info {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center; /* Center align the info content */
 }
 
 .header {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  align-items: center; /* Center align the header content */
 }
 
 .name {
@@ -33,59 +51,23 @@
 }
 
 .description {
-  max-width: 800px; /* Adjust the width to your preference */
+  max-width: 800px;
   font-size: 18px;
-}
-
-.socialLinks {
-  display: flex;
-  gap: 25px;
-}
-
-.socialLinks a {
-  margin: 0;
-}
-
-.socialLinks img {
-  width: 30px;
-}
-
-button {
-  background-color: var(--btn-color);
-  color: var(--btn-text-color);
-  border: none;
-  border-radius: 20px;
-  width: 126px;
-  height: 50px;
-  font-size: 20px;
-  font-weight: bold;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
-}
-
-button:hover {
-  transform: scale(1.05);
-}
-
-button:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  text-align: center; /* Center-align the description */
 }
 
 @media (min-width: 800px) {
   .container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    padding: 150px 20px;
   }
 }
 
 @media (min-width: 1400px) {
   .name {
-    font-size: 48px; /* Increase name font size for larger screens */
+    font-size: 48px;
   }
 
   .title {
-    font-size: 24px; /* Increase title font size for larger screens */
+    font-size: 24px;
   }
 }
