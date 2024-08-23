@@ -1,5 +1,5 @@
-import React from "react";
 import styles from "./ResumeStyle.module.css";
+import React, { useState, useEffect } from "react";
 
 const Resume = () => {
   return (
@@ -108,6 +108,21 @@ const Resume = () => {
             <strong>Payam-e Noor University</strong> - Computer Science
           </p>
           <p className={styles.date}>2021 - present</p>
+        </div>
+        <div className={styles.education}>
+          <p>
+            <strong>Shahid Beheshti High School</strong> - Experimental Field
+          </p>
+          <p className={styles.date}>2018 - 2021</p>
+        </div>
+      </div>
+      <div className={styles.section}>
+        <h2>Certification</h2>
+        <div className={styles.education}>
+          <p>
+            <strong>Maktab Sharif, Coding Boot Camp</strong>
+          </p>
+          <p className={styles.date}>Node.js Back-End Development (320+ hours)          </p>
         </div>
       </div>
     </section>
