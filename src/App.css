@@ -1,25 +1,31 @@
 :root {
-  --background-color: #fff;
-  --btn-color: #d84f2a;
-  --btn-text-color: #e1d9cf;
-  --project-card-bg: #ffffff00;
-  --text-color: #e1d9cf;
-  --form-text-color: #e1d9cf;
-  --footer-text-color: #e1d9cf;
+  --darkblue: #e6e2df;
+  --lightblue: #d6d0cf;
+  --darkgreen: #ebdfdf;
+  --lightgreen: #e1d9d9;
+  ---darkorange: #27b0d5;
+  --lightorange: #58bce463;
+  --darkcream: #292a3f;
+  --lightcream: #1e2530;
+  --darkwhite: #121920;
+  --lightwhite: #121212;
 }
 
-[data-theme='dark'] {
-  --background-color: #102937;
-  --btn-color: #d84f2a;
-  --btn-text-color: #e1d9cf;
-  --project-card-bg: #e1d9cf;
-  --text-color: #e1d9cf;
-  --form-text-color: #e1d9cf;
-  --footer-text-color: #e1d9cf;
+[data-theme="dark"] {
+  --darkblue: #091d26;
+  --lightblue: #102937;
+  --darkgreen: #094044;
+  --lightgreen: #124d54;
+  --darkorange: #d84f2a;
+  --lightorange: #f9744b5f;
+  --darkcream: #d6c4b0;
+  --lightcream: #e1d9cf;
+  --darkwhite: #ede6df;
+  --lightwhite: #ededed;
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--lightblue);
   display: flex;
   justify-content: center;
   margin: 0 auto 0px;
@@ -42,7 +48,7 @@ h1,
 h2,
 h3,
 p {
-  color: var(--text-color);
+  color: var(--darkcream);
   margin: 0;
   padding: 0;
 }
@@ -64,7 +70,7 @@ h3 {
 }
 
 h1 {
-  font-family: 'Rubik', monospace;
+  font-family: "Rubik", monospace;
   font-size: 32px;
 }
 
@@ -118,16 +124,17 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--darkblue);
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--lightgreen);
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--darkgreen);
 }
+
 html {
   overflow-y: scroll;
 }

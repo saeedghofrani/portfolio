@@ -3,7 +3,7 @@
     /* position: static; */
     bottom: 100vh;
     width: 100%;
-    color: #fff;
+    color: var(--lightwhite);
     text-align: center;
     flex-grow: 1;
     padding: 10px 0;
@@ -18,7 +18,7 @@
     width: 80%; /* Adjust this to make the line shorter or longer */
     margin: 0 auto; /* Center the line horizontally */
     border: none;
-    border-top: 1px solid #00bfff; /* Color of the line */
+    border-top: 1px solid var(--darkwhite); /* Color of the line */
   }
 
   .footer p {

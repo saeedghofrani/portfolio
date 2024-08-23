@@ -1,12 +1,10 @@
 .resumeContainer {
-  /* overflow-y: auto; Allows vertical scrolling */
-  /* height: auto; */
     padding: 100px 20px 20px 20px;
     flex-grow: 1;
     font-family: Arial, sans-serif;
     margin: 0 auto;
     font-family: Arial, sans-serif;
-    flex-grow: 1; /* This allows the resume to take up available space */
+    flex-grow: 1;
     max-width: 1000px;
     font-family: Arial, sans-serif;
   }
@@ -26,7 +24,7 @@
   .experienceHeader p {
     margin: 0;
     font-size: 16px;
-    color: #ffffff;
+    color: var(--darkcream);
   }
   header {
     text-align: center;
@@ -40,7 +38,7 @@
 
   .title {
     font-size: 20px;
-    color: #ffffff;
+    color: var(--darkcream);
     margin: 5px 0;
   }
 
@@ -54,7 +52,7 @@
   }
 
   .contactInfo a {
-    color: #0073b1;
+    color: var(--darkcream);
     text-decoration: none;
   }
 
@@ -68,7 +66,7 @@
 
   h2 {
     font-size: 24px;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid var(--darkcream);
     padding-bottom: 5px;
     margin-bottom: 15px;
   }
@@ -79,11 +77,11 @@
 
   .role {
     font-style: normal;
-    color: #ffffff;
+    color: var(--darkcream);
   }
 
   .date {
     font-size: 14px;
-    color: #ffffff;
+    color: var(--darkcream);
     margin-top: 5px;
   }

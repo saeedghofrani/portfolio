@@ -1,11 +1,11 @@
 .container {
   display: flex;
-  flex-direction: column; /* Change to column to stack elements vertically */
-  align-items: center; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
-  text-align: center; /* Center-align text */
-  padding: 100px 20px; /* Adjust padding as needed */
+  text-align: center;
+  padding: 100px 20px;
   height: auto;
   min-height: 500px;
   box-sizing: border-box;
@@ -15,46 +15,47 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; /* Make sure the container takes the full width */
+  width: 100%;
 }
 
 .quote {
   font-size: 20px;
   font-family: cursive;
-  color: var(--text-color); /* Match the color with your theme */
-  border-left: 4px solid var(--primary-color); /* Add a left border for emphasis */
-  padding-left: 10px; /* Add padding to the left of the text */
+  color: var(--lightcream);
+  padding-left: 10px;
 }
 
 .info {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: center; /* Center align the info content */
+  align-items: center;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  align-items: center; /* Center align the header content */
+  align-items: center;
 }
 
 .name {
   font-size: 36px;
   font-weight: bold;
+  color: var(--lightcream);
 }
 
 .title {
   font-size: 20px;
   border: 10px;
-  color: var(--text-color-secondary); /* Adjust color as needed */
+  color: var(--lightcream);
 }
 
 .description {
   max-width: 800px;
   font-size: 18px;
-  text-align: center; /* Center-align the description */
+  text-align: center;
+  color: var(--lightcream);;
 }
 
 @media (min-width: 800px) {

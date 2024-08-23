@@ -25,7 +25,7 @@
 
 .skillsTitle {
   font-size: 36px;
-  color: #2a94ff;
+  color: var(--lightgreen);
   text-align: center;
   margin-bottom: 40px;
   position: relative;
@@ -36,7 +36,7 @@
   display: block;
   width: 80px;
   height: 4px;
-  background-color: #0900ff;
+  background-color: var(--darkgreen);
   margin: 20px auto 0;
   border-radius: 2px;
 }
@@ -46,13 +46,9 @@
   transition: transform 0.3s ease;
 }
 
-.skillCategory:hover {
-  /* transform: translateY(-10px); */
-}
-
 .skillCategory h3 {
   font-size: 24px;
-  color: #d6c4b0;
+  color: var(--darkcream);
   margin-bottom: 15px;
   position: relative;
 }
@@ -62,7 +58,7 @@
   display: block;
   width: 50px;
   height: 4px;
-  background-color: #d84f2a;
+  background-color: var(--darkorange);
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -71,13 +67,9 @@
 
 .skillCategory p {
   font-size: 16px;
-  color: #e1d9cf;
+  color: var(--lightcream);
   line-height: 1.6;
   margin-left: 15px;
-}
-
-.skillCategory:hover p {
-  /* color: #343a40; */
 }
 
 @media (max-width: 768px) {

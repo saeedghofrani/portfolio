@@ -4,7 +4,7 @@
   top: 0;
   margin-bottom: 100px;
   left: 0;
-  background-color: #102937;
+  background-color: var(--lightblue);
   z-index: 1000;
   display: flex;
   justify-content: center;
@@ -25,7 +25,7 @@
 }
 
 .navIcon {
-  color: #d84f2a !important;
+  color: var(--darkorange) !important;
   font-size: 24px;
   text-decoration: none;
   display: flex;
@@ -38,14 +38,14 @@
 }
 
 .navIcon:hover {
-  color: #d8502a4c;
+  color: var(--lightorange);
 }
 
 .tooltip {
   position: absolute;
   bottom: -35px;
-  background-color: #555;
-  color: #fff;
+  background-color: var(--darkblue);
+  color: var(--darkcream);
   padding: 5px 8px;
   border-radius: 4px;
   white-space: nowrap;
@@ -61,8 +61,8 @@
 }
 
 .navbar .active .navIcon {
-  color: #d8502a53 !important;
-  border-bottom: 2px solid #d8502a4c;
+  color: var(--lightorange) !important;
+  border-bottom: 2px solid var(--lightorange);
   transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
 }
 
@@ -73,7 +73,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #d8502a4c;
+  background-color: var(--lightorange);
   transition: width 0.3s ease;
 }
 
@@ -88,7 +88,7 @@
 }
 
 .resume a {
-  color: #fff !important;
+  color: var(--darkcream) !important;
   text-decoration: none;
   font-size: 24px;
   padding: 8px;
@@ -97,5 +97,5 @@
 }
 
 .resume a:hover {
-  color: #00bfff;
+  color: var(--darkorange);
 }

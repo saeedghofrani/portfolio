@@ -29,17 +29,17 @@ textarea {
   border: #888 1px solid;
   box-sizing: border-box;
   justify-self: center;
-  background-color: var(--background-color);
-  color: var(--form-text-color);
+  background-color: var(--lightblue);
+  color: var(--lightcream);
 }
 
 ::placeholder {
-  color: var(--form-text-color);
+  color: var(--lightcream);
 }
 
 input[type='submit'] {
-  background-color: var(--btn-color);
-  color: var(--btn-text-color);
+  background-color: var(--darkorange);
+  color: var(--lightcream);
   border: none;
   border-radius: 20px;
   width: 126px;
