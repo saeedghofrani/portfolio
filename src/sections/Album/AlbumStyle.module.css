@@ -1,40 +1,41 @@
-/* src/pages/AlbumPage.module.css */
 .albumContainer {
-    padding: 200px;
-  }
+  padding: 100px 243px 50px 172px ;
+}
 
-  .section {
-    margin-bottom: 30px;
-  }
+.section {
+  margin-bottom: 30px;
+}
 
-  .title {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 
-  .imageContainer {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 10px 0;
-  }
+.imageContainer {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory; /* Ensures snapping happens in the horizontal direction */
+}
 
-  .image {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    margin-right: 10px;
-  }
+.image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 10px;
+  scroll-snap-align: start; /* Ensures the image snaps to the start of the container */
+}
 
-  .imageContainer::-webkit-scrollbar {
-    height: 8px;
-  }
+.imageContainer::-webkit-scrollbar {
+  height: 8px;
+}
 
-  .imageContainer::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 4px;
-  }
+.imageContainer::-webkit-scrollbar-thumb {
+  background-color: #88888800;
+  border-radius: 4px;
+}
 
-  .imageContainer::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-  }
+.imageContainer::-webkit-scrollbar-thumb:hover {
+  background-color: #55555500;
+}

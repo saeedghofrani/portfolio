@@ -3,7 +3,6 @@ import { useTheme } from "../../common/ThemeContext";
 import styles from "./HeroStyles.module.css";
 
 function Hero() {
-  const { theme, toggleTheme } = useTheme();
 
   // Array of quotes - you can add more quotes here in the future
   const quotes = [
