@@ -9,6 +9,7 @@ import Skills from "./sections/Skills/Skills";
 import Contact from "./sections/Contact/Contact";
 import FindMe from "./share/FindMe/FindMe";
 import Resume from './sections/Resume/Resume'
+import Album from './sections/Album/Album'
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/publication" element={<Contact />} />
-        <Route path="/album" element={<Contact />} />
+        <Route path="/album" element={<Album />} />
         <Route path="/exprience" element={<Contact />} />
       </Routes>
       <Footer />

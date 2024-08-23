@@ -28,7 +28,7 @@ body {
 #root {
   display: flex;
   position: relative;
-  gap: 60px;
+  gap: 5px;
   flex-direction: column;
   min-height: 100vh; /* Ensure the root covers the full viewport height */
   /* overflow: hidden; Prevents content from overflowing outside the viewport */
@@ -79,7 +79,7 @@ p {
 
 @media (width >= 800px) {
   #root {
-    gap: 100px;
+    gap: 5px;
   }
   h1 {
     font-size: 40px;
@@ -98,7 +98,7 @@ p {
 
   @media (width >= 1400px) {
     #root {
-      gap: 200px;
+      gap: 5px;
     }
     h1 {
       font-size: 48px;

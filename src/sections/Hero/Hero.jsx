@@ -21,6 +21,9 @@ function Hero() {
     "Sometimes even God ask's me, What the fuck is that. - deadpool",
     "I'm not in danger, Skyler. I am the one who create the Bug's. - Walter White",
     "That's one small step for a junior, one giant Debugging for the senior. - Neil Armstrong",
+    "How The Fuck Is That Working. - Mark Zuckerberg",
+    "Why The Fuck That Didn't Work. - Mark Zuckerberg",
+    "It's Working On My System. - Elon Musk",
   ];
 
   // State to store the selected quote
@@ -44,7 +47,6 @@ function Hero() {
           <h1 className={styles.name}>
             Saeed Ghofrani
             <h2 className={styles.title}>(The Web Developer)</h2>
-            <hr />
             <h2 className={styles.title}>
               Back End Developer | Expert in Node.js | Dedicated to Excellence
             </h2>

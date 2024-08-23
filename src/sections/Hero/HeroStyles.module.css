@@ -47,6 +47,7 @@
 
 .title {
   font-size: 20px;
+  border: 10px;
   color: var(--text-color-secondary); /* Adjust color as needed */
 }
 
