@@ -39,7 +39,7 @@
 }
 
 .navIcon:hover, .circleIcon:hover {
-  color: var(--lightblue);
+  color: var(--lightgreen);
 }
 
 .circleIcon {
