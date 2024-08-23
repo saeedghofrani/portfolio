@@ -8,7 +8,7 @@ import Projects from "./sections/Projects/Projects";
 import Skills from "./sections/Skills/Skills";
 import Contact from "./sections/Contact/Contact";
 import FindMe from "./share/FindMe/FindMe";
-import Resume from './sections/Resume/Resume'
+import Exprience from './sections/Exprience/Exprience'
 import Album from './sections/Album/Album'
 
 function App() {
@@ -20,10 +20,9 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/resume" element={<Resume />} />
+        <Route path="/exprience" element={<Exprience />} />
         <Route path="/publication" element={<Contact />} />
         <Route path="/album" element={<Album />} />
-        <Route path="/exprience" element={<Contact />} />
       </Routes>
       <Footer />
       <FindMe />

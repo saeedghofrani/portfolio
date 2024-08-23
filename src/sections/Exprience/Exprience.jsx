@@ -1,15 +1,10 @@
-import styles from "./ResumeStyle.module.css";
-import React, { useState, useEffect } from "react";
+import React from "react";
+import styles from "./ExprienceStyle.module.css";
 
-const Resume = () => {
+const Exprience = () => {
   return (
     <section className={styles.resumeContainer}>
-      <header>
-        <h1>Saeed Ghofrani Ivari</h1>
-        <p className={styles.title}>Backend Developer</p>
-      </header>
       <div className={styles.section}>
-        <h2>Professional Experience</h2>
         <div className={styles.job}>
           <div className={styles.experienceHeader}>
             <h3>License Market</h3>
@@ -116,17 +111,8 @@ const Resume = () => {
           <p className={styles.date}>2018 - 2021</p>
         </div>
       </div>
-      <div className={styles.section}>
-        <h2>Certification</h2>
-        <div className={styles.education}>
-          <p>
-            <strong>Maktab Sharif, Coding Boot Camp</strong>
-          </p>
-          <p className={styles.date}>Node.js Back-End Development (320+ hours)          </p>
-        </div>
-      </div>
     </section>
   );
 };
 
-export default Resume;
+export default Exprience;

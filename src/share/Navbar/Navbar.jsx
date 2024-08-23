@@ -75,15 +75,6 @@ const Navbar = () => {
           </Link>
         </li>
         <li
-          className={activeLink === "/resume" ? style.active : ""}
-          onClick={() => handleNavClick("/resume")}
-        >
-          <Link to="/resume" className={style.navIcon}>
-            <PiReadCvLogoFill />
-            <span className={style.tooltip}>Resume</span>
-          </Link>
-        </li>
-        <li
           className={activeLink === "/exprience" ? style.active : ""}
           onClick={() => handleNavClick("/exprience")}
         >
