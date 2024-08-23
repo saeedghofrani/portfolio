@@ -20,7 +20,7 @@ function Hero() {
     "May the source be with you. - Obi-Wan Kenobi",
     "Sometimes even God ask's me, What the fuck is that. - deadpool",
     "I'm not in danger, Skyler. I am the one who create the Bug's. - Walter White",
-    "That's one small step for a junior, one giant Debugging for the senior. - Neil Armstrong"
+    "That's one small step for a junior, one giant Debugging for the senior. - Neil Armstrong",
   ];
 
   // State to store the selected quote
@@ -36,18 +36,25 @@ function Hero() {
     <section id="hero" className={styles.container}>
       <div className={styles.info}>
         <div className={styles.quoteContainer}>
-        <blockquote className={styles.quote}>
-        <span>Quote Of The Day: </span> "{quoteOfTheDay}"
-        </blockquote>
+          <blockquote className={styles.quote}>
+            <span>Quote Of The Day: </span> "{quoteOfTheDay}"
+          </blockquote>
         </div>
         <div className={styles.header}>
           <h1 className={styles.name}>
             Saeed Ghofrani
             <h2 className={styles.title}>(The Web Developer)</h2>
+            <hr />
+            <h2 className={styles.title}>
+              Back End Developer | Expert in Node.js | Dedicated to Excellence
+            </h2>
           </h1>
         </div>
         <p className={styles.description}>
-          Hello! I'm Saeed Ghofrani, a passionate web developer with expertise in creating modern and efficient web applications using React. I specialize in delivering high-quality user experiences through clean and maintainable code. My goal is to leverage my skills to build innovative solutions that drive success for businesses and delight users.
+          Hello! I'm Saeed Ghofrani, Backend Engineer with more than 3 years of
+          experience building scalable web applications. Skilled in server-side
+          programming and passionate about contributing to innovative projects
+          at a forward-thinking company. #nerd #crazy-developer #nightmare-of-bugs
         </p>
       </div>
     </section>
