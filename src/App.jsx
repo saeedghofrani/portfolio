@@ -8,6 +8,7 @@ import Projects from "./sections/Projects/Projects";
 import Skills from "./sections/Skills/Skills";
 import Contact from "./sections/Contact/Contact";
 import FindMe from "./share/FindMe/FindMe";
+import Resume from './sections/Resume/Resume'
 
 function App() {
   return (
@@ -18,9 +19,13 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/publication" element={<Contact />} />
+        <Route path="/album" element={<Contact />} />
+        <Route path="/exprience" element={<Contact />} />
       </Routes>
-      <FindMe />
       <Footer />
+      <FindMe />
     </Router>
   );
 }

@@ -1,10 +1,11 @@
 /* Footer.css */
 .footer {
-    position: fixed;
+    /* position: static; */
     bottom: 0;
     width: 100%;
     color: #fff;
     text-align: center;
+    flex-grow: 1;
     padding: 10px 0;
     box-sizing: border-box;
   }
