@@ -1,7 +1,6 @@
 /* src/pages/Skills.module.css */
 
 .skillsSection {
-  background-color: #f8f9fa00;
   padding: 120px 20px 60px 20px;
   margin: 0 auto;
   max-width: 1200px;
@@ -10,7 +9,7 @@
 
 .skillsTitle {
   font-size: 36px;
-  color: #343a40;
+  color: #2a94ff;
   text-align: center;
   margin-bottom: 40px;
   position: relative;
@@ -21,7 +20,7 @@
   display: block;
   width: 80px;
   height: 4px;
-  background-color: #04014e;
+  background-color: #0900ff;
   margin: 20px auto 0;
   border-radius: 2px;
 }
@@ -37,7 +36,7 @@
 
 .skillCategory h3 {
   font-size: 24px;
-  color: #495057;
+  color: #d6c4b0;
   margin-bottom: 15px;
   position: relative;
 }
@@ -47,7 +46,7 @@
   display: block;
   width: 50px;
   height: 4px;
-  background-color: #083949;
+  background-color: #d84f2a;
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -56,7 +55,7 @@
 
 .skillCategory p {
   font-size: 16px;
-  color: #6c757d;
+  color: #e1d9cf;
   line-height: 1.6;
   margin-left: 15px;
 }
