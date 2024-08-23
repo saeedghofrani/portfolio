@@ -23,6 +23,8 @@ body {
   display: flex;
   justify-content: center;
   margin: 0 auto 0px;
+  cursor: default; /* Ensures the cursor is the default arrow */
+  user-select: none;
 }
 
 #root {
@@ -32,6 +34,8 @@ body {
   flex-direction: column;
   min-height: 100vh; /* Ensure the root covers the full viewport height */
   /* overflow: hidden; Prevents content from overflowing outside the viewport */
+  user-select: none;
+  cursor: default; /* Ensures the cursor is the default arrow */
 }
 
 h1,
