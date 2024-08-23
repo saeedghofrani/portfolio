@@ -31,7 +31,7 @@
 }
 
 .skillCategory:hover {
-  transform: translateY(-10px);
+  /* transform: translateY(-10px); */
 }
 
 .skillCategory h3 {
@@ -61,7 +61,7 @@
 }
 
 .skillCategory:hover p {
-  color: #343a40;
+  /* color: #343a40; */
 }
 
 @media (max-width: 768px) {
