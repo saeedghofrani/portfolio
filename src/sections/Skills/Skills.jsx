@@ -1,40 +1,71 @@
+import React from 'react';
 import styles from './SkillsStyles.module.css';
-import checkMarkIconDark from '../../assets/checkmark-dark.svg';
-import checkMarkIconLight from '../../assets/checkmark-light.svg';
-import SkillList from '../../common/SkillList';
-import { useTheme } from '../../common/ThemeContext';
 
-function Skills() {
-  const { theme } = useTheme();
-  const checkMarkIcon = theme === 'light' ? checkMarkIconLight : checkMarkIconDark;
-
+const Skills = () => {
   return (
-    <section id="skills" className={styles.container}>
-      <h1 className="sectionTitle">Skills</h1>
-      <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill="HTML" />
-        <SkillList src={checkMarkIcon} skill="CSS" />
-        <SkillList src={checkMarkIcon} skill="JavaScript" />
-        <SkillList src={checkMarkIcon} skill="TypeScript" />
-        <SkillList src={checkMarkIcon} skill="Node" />
+    <section className={styles.skillsSection}>
+
+      <div className={styles.skillCategory}>
+        <h3>Full-Stack Proficiency</h3>
+        <p>Adept in Node.js (NestJS, TypeScript, Express), familiar with frontend frameworks (Angular), familiar with C# Language (ASP.NET Core).</p>
       </div>
-      <hr />
-      <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill="React" />
-        <SkillList src={checkMarkIcon} skill="Angular" />
-        <SkillList src={checkMarkIcon} skill="Vue" />
-        <SkillList src={checkMarkIcon} skill="Tailwind CSS" />
+
+      <div className={styles.skillCategory}>
+        <h3>Polyglot Persistence</h3>
+        <p>Extensive experience with a diverse range of databases (PostgreSQL - proficient, MongoDB - proficient, Redis - proficient, RabbitMQ, Neo4j, MySQL, SQL, SQLite).</p>
       </div>
-      <hr />
-      <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill="Redux" />
-        <SkillList src={checkMarkIcon} skill="Webpack" />
-        <SkillList src={checkMarkIcon} skill="Git" />
-        <SkillList src={checkMarkIcon} skill="Jest" />
-        <SkillList src={checkMarkIcon} skill="Bootstrap" />
+
+      <div className={styles.skillCategory}>
+        <h3>Data Mastery</h3>
+        <p>Skilled in ORMs (Prisma, TypeORM, Sequelize) and crafting complex raw SQL and PostgreSQL queries.</p>
+      </div>
+
+      <div className={styles.skillCategory}>
+        <h3>Scalability Champion</h3>
+        <p>Proficient in deployment with Docker, Kubernetes, and Nginx for high-performance backend systems and container orchestration.</p>
+      </div>
+
+      <div className={styles.skillCategory}>
+        <h3>Real-Time Architect</h3>
+        <p>Implemented real-time functionalities using socket-based applications and Firebase for seamless data synchronization.</p>
+      </div>
+
+      <div className={styles.skillCategory}>
+        <h3>Microservices Mastermind</h3>
+        <p>Designed and developed microservices and RESTful APIs for complex projects.</p>
+      </div>
+
+      <div className={styles.skillCategory}>
+        <h3>Reporting Guru</h3>
+        <p>Developed comprehensive reporting systems for network projects and cryptocurrency exchanges.</p>
+      </div>
+
+      <div className={styles.skillCategory}>
+        <h3>Project Management Pro</h3>
+        <p>Utilized Trello and GitHub effectively to manage tasks, milestones, and collaborate efficiently.</p>
+      </div>
+
+      <div className={styles.skillCategory}>
+        <h3>CI/CD Automation Savvy</h3>
+        <p>Familiar with CI/CD pipelines for streamlined development workflows.</p>
+      </div>
+
+      <div className={styles.skillCategory}>
+        <h3>Thrive in Fast-Paced Environments</h3>
+        <p>Ability to manage complex projects while meeting deadlines.</p>
+      </div>
+
+      <div className={styles.skillCategory}>
+        <h3>Data-Driven Problem Solver</h3>
+        <p>Identifying critical issues, resulting in cost savings (30% reduction).</p>
+      </div>
+
+      <div className={styles.skillCategory}>
+        <h3>Collaborative & Communication Skills</h3>
+        <p>Foster communication across teams for seamless user experiences. Excellent technical communication skills in English.</p>
       </div>
     </section>
   );
-}
+};
 
 export default Skills;
