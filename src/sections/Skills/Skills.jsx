@@ -38,11 +38,15 @@ const Skills = () => {
 
   const handleClick = (skill) => {
     setSelectedSkill(skill === selectedSkill ? null : skill);
+    if (skill !== selectedSkill) {
+      setHoveredSkill(null); // Reset hover state when selecting a skill
+    }
   };
 
   const handleClickOutside = (event) => {
     if (iconSectionRef.current && !iconSectionRef.current.contains(event.target)) {
       setSelectedSkill(null);
+      setHoveredSkill(null); // Reset hover state when clicking outside
     }
   };
 
@@ -65,7 +69,7 @@ const Skills = () => {
       description: "Extensive experience with a diverse range of databases (PostgreSQL - proficient, MongoDB - proficient, Redis - proficient, RabbitMQ, Neo4j, MySQL, SQL, SQLite).",
     },
     {
-      icon: faTable ,
+      icon: faTable,
       name: "Data Mastery",
       description: "Skilled in ORMs (Prisma, TypeORM, Sequelize) and crafting complex raw SQL and PostgreSQL queries.",
     },
@@ -95,19 +99,19 @@ const Skills = () => {
       description: "Utilized Trello and GitHub effectively to manage tasks, milestones, and collaborate efficiently.",
     },
     {
-      icon: faCogs ,
+      icon: faCogs,
       name: "CI/CD Automation Savvy",
       description: "Familiar with CI/CD pipelines for streamlined development workflows.",
     },
     {
       icon: faTachometerAlt,
       name: "Thrive in Fast-Paced Environments",
-      description: "bility to manage complex projects while meeting deadlines.",
+      description: "Ability to manage complex projects while meeting deadlines.",
     },
     {
-      icon: faSearch ,
+      icon: faSearch,
       name: "Data-Driven Problem Solver",
-      description: "    Identifying critical issues, resulting in cost savings (30% reduction).",
+      description: "Identifying critical issues, resulting in cost savings (30% reduction).",
     },
     {
       icon: faUsers,
@@ -115,6 +119,7 @@ const Skills = () => {
       description: "Foster communication across teams for seamless user experiences. Excellent technical communication skills in English.",
     },
   ];
+
   return (
     <section className={styles.skillsSection}>
       <article className={styles.iconSection} ref={iconSectionRef}>
