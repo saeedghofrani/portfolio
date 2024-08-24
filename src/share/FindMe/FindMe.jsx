@@ -58,44 +58,44 @@ const FindMe = () => {
               <PiReadCvLogoFill className={styles.navIcon} onClick={handleDownload} />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/saeedghofrani"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="saeed ghofrani"
             >
               <FaGithub className={styles.navIcon} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/saeed-ghofrani/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="saeed ghofrani"
             >
               <FaLinkedin className={styles.navIcon} />
             </a>
             <a
-              href="https://t.me"
+              href="https://t.me/SaeedGhofraniIvari"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="saeed ghofrani"
             >
               <FaTelegramPlane className={styles.navIcon} />
             </a>
             <a
-              href="mailto:someone@example.com"
+              href="mailto:sa.ghofraniivari@gmail.com"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="saeed ghofrani"
             >
               <BiLogoGmail className={styles.navIcon} />
             </a>
             <a
-              href="https://stackoverflow.com"
+              href="https://stackoverflow.com/users/23426660/saeed-ghofrani"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="saeed ghofrani"
             >
               <FaStackOverflow className={styles.navIcon} />
             </a>
             <a
-              href="https://dev.to"
+              href="https://dev.to/saeed_ghofrani"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="saeed ghofrani"
             >
               <FaDev className={styles.navIcon} />
             </a>
