@@ -10,18 +10,25 @@
 
 .iconSection {
   display: flex;
+  position: fixed;
   flex-direction: row;
   justify-content: center; /* Center the icons horizontally */
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 50px;
   width: 100%; /* Ensure the section takes up the full width */
+  z-index: 100000;
 }
 
 .icnosSkill {
   margin: 0 25px; /* Adjust margin for better spacing */
   text-align: center;
   justify-content: center;
+  position: relative;
   color: var(--lightwhite) !important;
+}
+
+.skillText {
+  margin-top: 100px;
 }
 
 .skillsTitle {

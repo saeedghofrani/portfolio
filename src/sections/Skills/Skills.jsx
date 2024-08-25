@@ -131,6 +131,7 @@ const Skills = () => {
             onMouseLeave={handleMouseLeave}
             onClick={() => handleClick(skill.name)}
             style={{
+              // position: "fixed",
               opacity: selectedSkill && selectedSkill !== skill.name ? 0 : 1,
               filter: hoveredSkill && hoveredSkill !== skill.name ? "brightness(0.5)" : "brightness(1)",
               cursor: "pointer",
@@ -140,7 +141,7 @@ const Skills = () => {
           </div>
         ))}
       </article>
-      <article>
+      <article className={styles.skillText}>
         {skills.map((skill, index) => (
           <div
             key={index}
