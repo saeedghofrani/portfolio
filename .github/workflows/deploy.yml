@@ -1,0 +1,27 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+          host: 46.249.99.178
+          username: root
+          port: 2831
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /path/to/your/project
+            git pull origin master
+            docker-compose up -d --build
