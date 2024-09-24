@@ -19,7 +19,7 @@ jobs:
           host: 46.249.99.178
           username: root
           port: 2831
-          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd  /root/project/portfolio
             git pull origin master
