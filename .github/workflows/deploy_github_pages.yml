@@ -27,8 +27,8 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: ./dist
-          destination_repo: saeedghofrani/saeedghofrani.github.io
+          external_repository: saeedghofrani/saeedghofrani.github.io
           user_name: saeedghofrani
           user_email: sa.ghofraniivari@gmail.com
