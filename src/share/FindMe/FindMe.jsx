@@ -16,7 +16,7 @@ import styles from "./FindMe.module.css";
 const FindMe = () => {
     const handleDownload = () => {
     // Path to your PDF file
-    const filePath = "/assets/saeed ghofrani ivari.pdf";
+    const filePath = "/assets/saeed ghofrani ivari (document).pdf";
     const link = document.createElement('a');
     link.href = filePath;
     link.download = 'saeed-ghofrani-ivari.pdf'; // Optional: specify filename
