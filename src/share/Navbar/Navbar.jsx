@@ -29,7 +29,7 @@ const Navbar = () => {
             <span className={style.tooltip}>Home</span>
           </Link>
         </li>
-        <li
+        {/* <li
           className={activeLink === "/projects" ? style.active : ""}
           onClick={() => handleNavClick("/projects")}
         >
@@ -37,7 +37,7 @@ const Navbar = () => {
             <GrProjects />
             <span className={style.tooltip}>Projects</span>
           </Link>
-        </li>
+        </li> */}
         <li
           className={activeLink === "/skills" ? style.active : ""}
           onClick={() => handleNavClick("/skills")}
@@ -56,7 +56,7 @@ const Navbar = () => {
             <span className={style.tooltip}>Contact</span>
           </Link>
         </li>
-        <li
+        {/* <li
           className={activeLink === "/publication" ? style.active : ""}
           onClick={() => handleNavClick("/publication")}
         >
@@ -64,8 +64,8 @@ const Navbar = () => {
             <FaPenFancy />
             <span className={style.tooltip}>Publication</span>
           </Link>
-        </li>
-        <li
+        </li> */}
+        {/* <li
           className={activeLink === "/album" ? style.active : ""}
           onClick={() => handleNavClick("/album")}
         >
@@ -73,8 +73,8 @@ const Navbar = () => {
             <IoIosAlbums />
             <span className={style.tooltip}>Album</span>
           </Link>
-        </li>
-        <li
+        </li> */}
+        {/* <li
           className={activeLink === "/exprience" ? style.active : ""}
           onClick={() => handleNavClick("/exprience")}
         >
@@ -82,7 +82,7 @@ const Navbar = () => {
             <FaBriefcase />
             <span className={style.tooltip}>Exprience</span>
           </Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
