@@ -1,32 +1,36 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FindMe from "./components/FindMe";
-import HeroSection from "./sections/HeroSection/HeroSection";
-import AboutSection from "./sections/AboutSection/AboutSection";
-import SkillsSection from "./sections/SkillsSection/SkillsSection";
-import ExperienceSection from "./sections/ExperienceSection/ExperienceSection";
-import ProjectsSection from "./sections/ProjectsSection/ProjectsSection";
-import TestimonialsSection from "./sections/TestimonialsSection/TestimonialsSection";
-import PublicationSection from "./sections/PublicationSection/PublicationSection";
-import AlbumSection from "./sections/AlbumSection/AlbumSection";
-import ContactSection from "./sections/ContactSection/ContactSection";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import SkillsPage from "./pages/SkillsPage";
+import ExperiencePage from "./pages/ExperiencePage";
+import ProjectsPage from "./pages/ProjectsPage";
+import ContactPage from "./pages/ContactPage";
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <TestimonialsSection />
-      <PublicationSection />
-      <AlbumSection />
-      <ContactSection />
-      <Footer />
-      <FindMe />
-    </div>
+    <Router>
+      <div className="min-h-screen flex flex-col w-full overflow-x-hidden">
+        <div className="bg"></div>
+        <div className="bg bg2"></div>
+        <div className="bg bg3"></div>
+        <Navbar />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/skills" element={<SkillsPage />} />
+            <Route path="/experience" element={<ExperiencePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </main>
+        <Footer />
+        <FindMe />
+      </div>
+    </Router>
   );
 };
 

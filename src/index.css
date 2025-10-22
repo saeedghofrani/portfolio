@@ -1,58 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-    height:100%;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: #F5F5F5;
+  overflow-x: hidden;
+  background: #013220;
+  font-family: 'Kalam', cursive;
+}
+
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #026440 50%, #014421 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.4;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+  /* Professional Developer Navbar Styles */
+  .navbar-container {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 10px 0;
   }
 
-  body {
-    margin:0;
+  .actions-bar {
+    position: relative;
+    width: 50%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: transparent;
+    border-radius: 20px;
   }
 
-  .bg {
-    animation:slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, var(--darkblue) 50%, var(--lightblue) 50%);
-    bottom:0;
-    left:-50%;
-    opacity:.5;
-    position:fixed;
-    right:-50%;
-    top:0;
-    z-index:-1;
+  .action {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: none; /* No border */
+    color: #000000; /* Black color */
+    transition: all 0.3s ease;
+    z-index: 1;
+    cursor: pointer;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
-  .bg2 {
-    animation-direction:alternate-reverse;
-    animation-duration:4s;
+  .action:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: #FFD700; /* Gold hover */
   }
 
-  .bg3 {
-    animation-duration:5s;
+  .action.selected {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text when selected */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
   }
 
-  .content {
-    background-color:var(--lightblue);
-    border-radius:.25em;
-    box-shadow: var(--lightblue);
-    box-sizing:border-box;
-    left:50%;
-    padding:10vmin;
-    position:fixed;
-    text-align:center;
-    top:50%;
-    transform:translate(-50%, -50%);
+  .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2rem;
   }
 
-  h1 {
-    font-family:monospace;
+  .nav-link:hover {
+    color: inherit;
   }
 
-  @keyframes slide {
-    0% {
-      transform:translateX(-25%);
-    }
-    100% {
-      transform:translateX(25%);
-    }
+  /* Professional Handwriting Typography */
+  .font-handwriting {
+    font-family: 'Kalam', cursive;
+  }
+
+  .font-handwriting-light {
+    font-family: 'Kalam', cursive;
+    font-weight: 300;
+  }
+
+  .font-handwriting-normal {
+    font-family: 'Kalam', cursive;
+    font-weight: 400;
+  }
+
+  .font-handwriting-bold {
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+  }
+
+  /* Enhanced readability for headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  /* Body text optimization */
+  p, span, div {
+    font-family: 'Kalam', cursive;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  /* Prevent horizontal scrolling */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* Ensure all containers respect viewport width */
+  * {
+    box-sizing: border-box;
   }
