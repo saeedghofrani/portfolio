@@ -1,0 +1,175 @@
+/* Custom CSS for FindMe component */
+.findme-container {
+  position: fixed;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+}
+
+.findme-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.findme-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.findme-button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease-out;
+  border: none;
+  outline: none;
+  background: linear-gradient(135deg, #c026d3, #059669, #0891b2);
+  box-shadow: 0 10px 25px lab(28.06% -31.33 23.78 / 0.692);
+}
+
+.findme-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d946ef, #10b981, #06b6d4);
+  z-index: -1;
+}
+
+.findme-button:hover::before {
+  background: linear-gradient(135deg, #c026d3, #059669, #0891b2);
+}
+
+.findme-button.open {
+  transform: scale(1.05);
+}
+
+.findme-button.open::before {
+  background: linear-gradient(135deg, #d946ef, #10b981, #06b6d4);
+}
+
+.findme-icon {
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.3s ease-out;
+}
+
+.findme-icon.open {
+  transform: rotate(90deg);
+}
+
+.findme-menu {
+  position: absolute;
+  left: 100%;
+  margin-left: 1rem;
+  transform-origin: left center;
+  transition: all 0.3s ease-out;
+}
+
+.findme-menu.closed {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+.findme-menu.open {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.findme-menu-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.findme-menu-item {
+  padding: 1rem;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.findme-menu-item:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.findme-menu-item.github {
+  background-color: #1f2937;
+}
+
+.findme-menu-item.github:hover {
+  background-color: #374151;
+}
+
+.findme-menu-item.linkedin {
+  background-color: #1d4ed8;
+}
+
+.findme-menu-item.linkedin:hover {
+  background-color: #1e40af;
+}
+
+.findme-menu-item.telegram {
+  background-color: #60a5fa;
+}
+
+.findme-menu-item.telegram:hover {
+  background-color: #3b82f6;
+}
+
+.findme-menu-item.gmail {
+  background-color: #ef4444;
+}
+
+.findme-menu-item.gmail:hover {
+  background-color: #dc2626;
+}
+
+.findme-menu-item.stackoverflow {
+  background-color: #f97316;
+}
+
+.findme-menu-item.stackoverflow:hover {
+  background-color: #ea580c;
+}
+
+.findme-menu-item.dev {
+  background-color: #111827;
+}
+
+.findme-menu-item.dev:hover {
+  background-color: #1f2937;
+}
+
+.findme-menu-item-icon {
+  font-size: 1.5rem;
+}

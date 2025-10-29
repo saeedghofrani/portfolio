@@ -9,6 +9,7 @@ import {
 import { IoShareSocial } from "react-icons/io5";
 import { BiLogoGmail } from "react-icons/bi";
 import { PiReadCvLogoFill } from "react-icons/pi";
+import "./FindMe.css";
 
 const FindMe: React.FC = () => {
     const handleDownload = () => {
@@ -20,7 +21,7 @@ const FindMe: React.FC = () => {
     link.click();
     document.body.removeChild(link);
   };
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleNavbar = () => {
@@ -41,80 +42,83 @@ const FindMe: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-4 left-4 z-50" ref={menuRef}>
-      <div
-        className={`relative w-12 h-12 flex items-center justify-center rounded-full shadow-lg transition-all duration-300
-          ${isOpen ? 'bg-blue-600' : 'bg-gray-700 hover:bg-gray-600'} cursor-pointer`}
-        onClick={toggleNavbar}
-      >
-        {!isOpen && <IoShareSocial className="text-white text-2xl" />}
-        {isOpen && (
-          <div className="absolute bottom-0 left-full ml-4 flex flex-col items-start space-y-2">
-            <a
+    <>
+      <div className={`findme-backdrop ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}></div>
+      <div className="findme-container" ref={menuRef}>
+        <button
+          aria-label="Open social links"
+          className={`findme-button ${isOpen ? 'open' : ''}`}
+          onClick={toggleNavbar}
+        >
+          <IoShareSocial className={`findme-icon ${isOpen ? 'open' : ''}`} />
+          <div className={`findme-menu ${isOpen ? 'open' : 'closed'}`}>
+          <div className="findme-menu-items">
+            <button
               onClick={handleDownload}
-              className="p-3 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 transition duration-300 flex items-center justify-center"
+              className="findme-menu-item"
               title="Download CV"
             >
-              <PiReadCvLogoFill className="text-xl" />
-            </a>
+              <PiReadCvLogoFill className="findme-menu-item-icon" />
+            </button>
             <a
               href="https://github.com/saeedghofrani"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-gray-800 text-white rounded-full shadow-md hover:bg-gray-700 transition duration-300 flex items-center justify-center"
+              className="findme-menu-item github"
               title="GitHub"
             >
-              <FaGithub className="text-xl" />
+              <FaGithub className="findme-menu-item-icon" />
             </a>
             <a
               href="https://www.linkedin.com/in/saeed-ghofrani/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-blue-700 text-white rounded-full shadow-md hover:bg-blue-800 transition duration-300 flex items-center justify-center"
+              className="findme-menu-item linkedin"
               title="LinkedIn"
             >
-              <FaLinkedin className="text-xl" />
+              <FaLinkedin className="findme-menu-item-icon" />
             </a>
             <a
               href="https://t.me/SaeedGhofraniIvari"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-blue-400 text-white rounded-full shadow-md hover:bg-blue-500 transition duration-300 flex items-center justify-center"
+              className="findme-menu-item telegram"
               title="Telegram"
             >
-              <FaTelegramPlane className="text-xl" />
+              <FaTelegramPlane className="findme-menu-item-icon" />
             </a>
             <a
               href="mailto:sa.ghofraniivari@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-red-500 text-white rounded-full shadow-md hover:bg-red-600 transition duration-300 flex items-center justify-center"
+              className="findme-menu-item gmail"
               title="Gmail"
             >
-              <BiLogoGmail className="text-xl" />
+              <BiLogoGmail className="findme-menu-item-icon" />
             </a>
             <a
               href="https://stackoverflow.com/users/23426660/saeed-ghofrani"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-orange-500 text-white rounded-full shadow-md hover:bg-orange-600 transition duration-300 flex items-center justify-center"
+              className="findme-menu-item stackoverflow"
               title="Stack Overflow"
             >
-              <FaStackOverflow className="text-xl" />
+              <FaStackOverflow className="findme-menu-item-icon" />
             </a>
             <a
               href="https://dev.to/saeed_ghofrani"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-gray-900 text-white rounded-full shadow-md hover:bg-gray-700 transition duration-300 flex items-center justify-center"
+              className="findme-menu-item dev"
               title="Dev.to"
             >
-              <FaDev className="text-xl" />
+              <FaDev className="findme-menu-item-icon" />
             </a>
           </div>
-        )}
-      </div>
+        </div>
+      </button>
     </div>
+    </>
   );
 };
 
