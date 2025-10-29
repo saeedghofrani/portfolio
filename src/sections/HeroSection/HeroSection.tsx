@@ -1,31 +1,88 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTypingEffect } from "../../hooks/useTypingEffect";
 
 const HeroSection: React.FC = () => {
-  const handleDownload = () => {
-    const filePath = "/assets/cv.pdf";
-    const link = document.createElement('a');
-    link.href = filePath;
-    link.download = 'saeed-ghofrani-ivari.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  const [shouldStartName, setShouldStartName] = useState(false);
+  const [shouldStartTitle, setShouldStartTitle] = useState(false);
+  const [shouldStartDescription, setShouldStartDescription] = useState(false);
+
+  const quoteText =
+    '"Code is like humor. When you have to explain it, it\'s bad." - Cory House';
+  const nameText = "Saeed Ghofrani";
+  const titleText = "Software Engineer";
+  const descriptionText =
+    "Backend Development Expert | Node.js Specialist | Building Scalable Solutions";
+
+  const shouldStartQuote = true;
+  const typedQuote = useTypingEffect({
+    text: quoteText,
+    speed: 30,
+    shouldStart: shouldStartQuote,
+  });
+  const typedName = useTypingEffect({
+    text: nameText,
+    speed: 100,
+    shouldStart: shouldStartName,
+  });
+  const typedTitle = useTypingEffect({
+    text: titleText,
+    speed: 100,
+    shouldStart: shouldStartTitle,
+  });
+  const typedDescription = useTypingEffect({
+    text: descriptionText,
+    speed: 30,
+    shouldStart: shouldStartDescription,
+  });
+
+  useEffect(() => {
+    if (shouldStartQuote && typedQuote === quoteText) {
+      setTimeout(() => setShouldStartName(true), 300);
+    }
+  }, [typedQuote, quoteText, shouldStartQuote]);
+
+  useEffect(() => {
+    if (shouldStartName && typedName === nameText) {
+      setTimeout(() => setShouldStartTitle(true), 300);
+    }
+  }, [typedName, nameText, shouldStartName]);
+
+  useEffect(() => {
+    if (shouldStartTitle && typedTitle === titleText) {
+      setTimeout(() => setShouldStartDescription(true), 300);
+    }
+  }, [typedTitle, titleText, shouldStartTitle]);
 
   return (
     <section className="py-16 px-8 text-gray-100">
       <div className="text-center max-w-4xl mx-auto">
-        <h1 className="text-5xl font-bold mb-4 text-white">Saeed Ghofrani</h1>
-        <h2 className="text-3xl mb-4 text-emerald-400">Senior Software Engineer & Team Lead</h2>
-        <p className="text-xl mb-8 text-gray-300">Backend Development Expert | Node.js Specialist | Building Scalable Solutions</p>
-
-        <div className="flex gap-4 justify-center">
-          <Link to="/contact" className="px-8 py-4 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors duration-300 font-semibold">
-            Contact Me
-          </Link>
-          <button onClick={handleDownload} className="px-8 py-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors duration-300 font-semibold border border-gray-600">
-            Download CV
-          </button>
+        <h1 className="hero-title mb-6 text-white">
+          {typedName}
+          {shouldStartName && typedName !== nameText && (
+            <span className="animate-pulse">|</span>
+          )}
+        </h1>
+        <h2 className="hero-subtitle mb-6 text-emerald-400">
+          {typedTitle}
+          {shouldStartTitle && typedTitle !== titleText && (
+            <span className="animate-pulse">|</span>
+          )}
+        </h2>
+        <div className="mb-12 max-w-5xl mx-auto">
+          <div className="text-3xl md:text-5xl text-gray-300 italic pl-8 py-8 bg-gray-800/30 backdrop-blur-sm ">
+            {typedQuote}
+            {shouldStartQuote && typedQuote !== quoteText && (
+              <span className="animate-pulse">|</span>
+            )}
+          </div>
         </div>
+        <p className="text-xl mb-8 text-gray-300">
+          {typedDescription}
+          {shouldStartDescription && typedDescription !== descriptionText && (
+            <span className="animate-pulse">|</span>
+          )}
+        </p>
       </div>
     </section>
   );

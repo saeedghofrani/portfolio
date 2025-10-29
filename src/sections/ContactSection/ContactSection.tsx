@@ -11,9 +11,10 @@ const ContactSection: React.FC = () => {
 
   return (
     <section className="py-16 px-8 text-gray-100">
-      <h1 className="text-4xl font-bold text-center mb-8 text-emerald-400">Contact Me</h1>
+      <div className="max-w-2xl mx-auto text-center">
+        <h1 className="text-4xl font-bold mb-8 text-emerald-400">Contact Me</h1>
 
-      <div className="max-w-2xl mx-auto bg-gray-800/50 backdrop-blur-sm p-8 rounded-lg border border-emerald-500/30">
+        <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-lg border border-emerald-500/30">
         <div className="mb-6">
           <h2 className="text-xl font-bold mb-4 text-emerald-300">Get In Touch</h2>
           <p className="text-gray-300 mb-2">Email: sa.ghofraniivari@gmail.com</p>
@@ -53,6 +54,7 @@ const ContactSection: React.FC = () => {
             Send Message
           </button>
         </form>
+        </div>
       </div>
 
       {toast && (

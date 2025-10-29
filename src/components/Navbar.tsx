@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 import { FaHome, FaTools, FaEnvelope, FaPenFancy, FaBriefcase } from "react-icons/fa";
-import { PiReadCvLogoFill } from "react-icons/pi";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -34,13 +33,6 @@ const Navbar: React.FC = () => {
         >
           <Link to="/experience" className="nav-link">
             <FaBriefcase />
-          </Link>
-        </li>
-        <li
-          className={`action ${location.pathname === "/projects" ? 'selected' : ''}`}
-        >
-          <Link to="/projects" className="nav-link">
-            <PiReadCvLogoFill />
           </Link>
         </li>
         <li
