@@ -315,3 +315,21 @@ body {
   * {
     box-sizing: border-box;
   }
+
+  /* Global link styles - prevent default blue color */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: inherit;
+  }
+
+  a:visited {
+    color: inherit;
+  }
+
+  a:active {
+    color: inherit;
+  }
