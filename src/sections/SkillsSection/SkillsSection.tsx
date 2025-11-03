@@ -91,12 +91,12 @@ const SkillsSection: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <h1 className="text-6xl md:text-8xl font-bold mb-20 text-emerald-400 text-center">My Skills</h1>
+        <h1 className="section-title mb-20 text-center">My Skills</h1>
 
         <div className="flex flex-wrap gap-8 justify-center ml-20">
           {skillCategories.map((category, index) => (
             <div key={index} className="flex-1 min-w-[280px] max-w-[320px]" style={{ margin: '5px' }}>
-              <h2 className="text-2xl font-bold text-white mb-6 text-center">{category.title}</h2>
+              <h2 className="card-title mb-6 text-center">{category.title}</h2>
               <div className="grid grid-cols-2 gap-3">
                 {category.skills.map((skill, skillIndex) => (
                   <div

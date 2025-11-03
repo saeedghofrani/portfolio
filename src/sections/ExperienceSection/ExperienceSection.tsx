@@ -53,19 +53,19 @@ const ExperienceSection: React.FC = () => {
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <h1 className="text-6xl md:text-8xl font-bold mb-20 text-emerald-400 text-center">Work Experience</h1>
+        <h1 className="section-title mb-20 text-center">Work Experience</h1>
 
         <div className="space-y-12">
           {experiences.map((exp, index) => (
             <div key={index} className="group">
               <div className="mb-6 flex items-center justify-between">
-                <h3 className="text-4xl md:text-5xl font-bold text-white">{exp.role}</h3>
-                <span className="text-2xl md:text-3xl text-emerald-400">{exp.company} | {exp.period}</span>
+                <h3 className="text-3xl md:text-5xl font-bold text-white">{exp.role}</h3>
+                <span className="text-2xl md:text-3xl text-highlight">{exp.company} | {exp.period}</span>
               </div>
               <ul className="space-y-4">
                 {exp.achievements.map((achievement, i) => (
-                  <li key={i} className="flex items-start text-gray-300 text-xl md:text-2xl">
-                    <span className="text-emerald-400 mr-3 mt-2">▹</span>
+                  <li key={i} className="flex items-start text-medium">
+                    <span className="text-highlight mr-3 mt-2">▹</span>
                     <span>{achievement}</span>
                   </li>
                 ))}

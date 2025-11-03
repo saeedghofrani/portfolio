@@ -70,14 +70,14 @@ const HeroSection: React.FC = () => {
           )}
         </h2>
         <div className="mb-12 max-w-5xl mx-auto">
-          <div className="text-3xl md:text-5xl text-gray-300 italic pl-8 py-8 bg-gray-800/30 backdrop-blur-sm ">
+          <div className="hero-quote pl-8 py-8 bg-gray-800/30 backdrop-blur-sm">
             {typedQuote}
             {shouldStartQuote && typedQuote !== quoteText && (
               <span className="animate-pulse">|</span>
             )}
           </div>
         </div>
-        <p className="text-xl mb-8 text-gray-300">
+        <p className="hero-description mb-8">
           {typedDescription}
           {shouldStartDescription && typedDescription !== descriptionText && (
             <span className="animate-pulse">|</span>

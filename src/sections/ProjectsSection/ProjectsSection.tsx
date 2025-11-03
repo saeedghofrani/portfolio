@@ -20,12 +20,12 @@ const ProjectsSection: React.FC = () => {
   return (
     <section className="py-16 px-8 text-gray-100">
       <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-4xl font-bold mb-12 text-emerald-400">My Projects</h1>
+        <h1 className="section-title mb-12">My Projects</h1>
         <div className="space-y-6">
           {projects.map((project, index) => (
             <div key={index} className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg border border-emerald-500/30">
-              <h3 className="text-2xl font-bold mb-3 text-white">{project.title}</h3>
-              <p className="text-gray-300 mb-4">{project.description}</p>
+              <h3 className="card-title mb-3">{project.title}</h3>
+              <p className="card-text mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 justify-center">
                 {project.technologies.map((tech, techIndex) => (
                   <span key={techIndex} className="bg-emerald-600/20 text-emerald-400 px-3 py-1 rounded text-sm border border-emerald-500/30">
