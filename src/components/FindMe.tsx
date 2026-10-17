@@ -51,7 +51,8 @@ const FindMe: React.FC = () => {
           onClick={toggleNavbar}
         >
           <IoShareSocial className={`findme-icon ${isOpen ? 'open' : ''}`} />
-          <div className={`findme-menu ${isOpen ? 'open' : 'closed'}`}>
+        </button>
+        <div className={`findme-menu ${isOpen ? 'open' : 'closed'}`}>
           <div className="findme-menu-items">
             <button
               onClick={handleDownload}
@@ -116,7 +117,6 @@ const FindMe: React.FC = () => {
             </a>
           </div>
         </div>
-      </button>
     </div>
     </>
   );

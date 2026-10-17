@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { FaHome, FaTools, FaEnvelope, FaPenFancy, FaBriefcase } from "react-icons/fa";
+import { FaHome, FaTools, FaEnvelope, FaPenFancy, FaBriefcase, FaDiceD20 } from "react-icons/fa";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -40,6 +40,13 @@ const Navbar: React.FC = () => {
         >
           <Link to="/contact" className="nav-link">
             <FaEnvelope />
+          </Link>
+        </li>
+        <li
+          className={`action ${location.pathname === "/playground" ? 'selected' : ''}`}
+        >
+          <Link to="/playground" className="nav-link" aria-label="Playground">
+            <FaDiceD20 />
           </Link>
         </li>
       </ul>

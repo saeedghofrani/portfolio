@@ -77,6 +77,7 @@
 .findme-menu {
   position: absolute;
   left: 100%;
+  top: 0;
   margin-left: 1rem;
   transform-origin: left center;
   transition: all 0.3s ease-out;
