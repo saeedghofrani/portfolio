@@ -1,54 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
-    height:100%;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: #F5F5F5;
+  overflow-x: hidden;
+  background: #013220;
+  font-family: 'Kalam', cursive;
+}
+
+.bg {
+  animation: slide 8s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #026440 50%, #014421 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.4;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 10s;
+}
+
+.bg3 {
+  animation-duration: 12s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+  /* Professional Developer Navbar Styles */
+  .navbar-container {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 10px 0;
   }
 
-  body {
-    margin:0;
+  .actions-bar {
+    position: relative;
+    width: 50%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: transparent;
+    border-radius: 20px;
   }
 
-  .bg {
-    animation:slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, var(--darkblue) 50%, var(--lightblue) 50%);
-    bottom:0;
-    left:-50%;
-    opacity:.5;
-    position:fixed;
-    right:-50%;
-    top:0;
-    z-index:-1;
+  .action {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: none; /* No border */
+    color: #000000; /* Black color */
+    transition: all 0.3s ease;
+    z-index: 1;
+    cursor: pointer;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
-  .bg2 {
-    animation-direction:alternate-reverse;
-    animation-duration:4s;
+  .action:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: #FFD700; /* Gold hover */
   }
 
-  .bg3 {
-    animation-duration:5s;
+  .action.selected {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text when selected */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
   }
 
-  .content {
-    background-color:var(--lightblue);
-    border-radius:.25em;
-    box-shadow: var(--lightblue);
-    box-sizing:border-box;
-    left:50%;
-    padding:10vmin;
-    position:fixed;
-    text-align:center;
-    top:50%;
-    transform:translate(-50%, -50%);
+  .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2rem;
   }
 
-  h1 {
-    font-family:monospace;
+  .nav-link:hover {
+    color: inherit;
   }
 
-  @keyframes slide {
-    0% {
-      transform:translateX(-25%);
+  /* Professional Handwriting Typography */
+  .font-handwriting {
+    font-family: 'Kalam', cursive;
+  }
+
+  .font-handwriting-light {
+    font-family: 'Kalam', cursive;
+    font-weight: 300;
+  }
+
+  .font-handwriting-normal {
+    font-family: 'Kalam', cursive;
+    font-weight: 400;
+  }
+
+  .font-handwriting-bold {
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+  }
+
+  /* Enhanced readability for headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  /* Body text optimization */
+  p, span, div {
+    font-family: 'Kalam', cursive;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  /* =================================================================
+     TYPOGRAPHY SYSTEM - Centralized Text Styles
+     ================================================================= */
+
+  /* Page Titles - Main section headings */
+  .page-title {
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #10b981; /* emerald-400 */
+  }
+
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 4.5rem;
     }
-    100% {
-      transform:translateX(25%);
+  }
+
+  /* Hero Section Large Text Styles */
+  .hero-title {
+    font-size: 5rem;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-subtitle {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+  }
+
+  .hero-quote {
+    font-size: 2rem;
+    line-height: 1.3;
+    color: #d1d5db; /* gray-300 */
+    font-style: italic;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #d1d5db; /* gray-300 */
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 3.5rem;
     }
+
+    .hero-subtitle {
+      font-size: 2.5rem;
+    }
+
+    .hero-quote {
+      font-size: 2.25rem;
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 2rem;
+    }
+
+    .hero-quote {
+      font-size: 1.5rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+    }
+  }
+
+  /* Section Titles - Large section headings */
+  .section-title {
+    font-size: 5rem;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #10b981; /* emerald-400 */
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 4rem;
+    }
+  }
+
+  /* Paragraph Large - Large body text for emphasis */
+  .text-large {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #d1d5db; /* gray-300 */
+  }
+
+  @media (max-width: 768px) {
+    .text-large {
+      font-size: 1.75rem;
+    }
+  }
+
+  /* Paragraph Medium - Standard body text */
+  .text-medium {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #d1d5db; /* gray-300 */
+  }
+
+  @media (max-width: 768px) {
+    .text-medium {
+      font-size: 1.25rem;
+    }
+  }
+
+  /* Highlight Text - For emphasized spans */
+  .text-highlight {
+    color: #10b981; /* emerald-400 */
+    font-weight: 600;
+  }
+
+  /* Card Title - Titles in cards/components */
+  .card-title {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  @media (max-width: 768px) {
+    .card-title {
+      font-size: 1.25rem;
+    }
+  }
+
+  /* Card Text - Body text in cards */
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #d1d5db; /* gray-300 */
+  }
+
+  /* Small Text - For labels, dates, etc. */
+  .text-small {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #9ca3af; /* gray-400 */
+  }
+
+  /* Ensure all containers respect viewport width */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Global link styles - prevent default blue color */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: inherit;
+  }
+
+  a:visited {
+    color: inherit;
+  }
+
+  a:active {
+    color: inherit;
   }
